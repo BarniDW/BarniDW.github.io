@@ -1,0 +1,61 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
+/* Header styles */
+header {
+    background-color: #161618; /* Greyish-black background */
+    border-bottom: 2px solid #414146; /* Slightly lighter greyish border */
+    position: fixed; /* Fixed position */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header stays above other elements */
+}
+
+/* Header container with max-width */
+.header-container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* Header title styling */
+.header-title {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+}
+
+/* Nav button styling */
+.nav-buttons {
+    display: flex;
+    gap: 3px;
+}
+
+.nav-buttons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.225em;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+/* Hover effect on buttons */
+.nav-buttons a:hover {
+    color: #9c9797;
+}
+
+/* Adding some padding to the top of the main content to avoid overlap with the fixed header */
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
