@@ -1,32 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barni's Commissions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-container">
-            <div class="header-title">barnidw</div>
-            <nav class="nav-buttons">
-                <a href="#home">Home</a>
-                <a href="#about-me">About Me</a>
-                <a href="#past-work">Past Work</a>
-                <a href="#pricing">Pricing</a>
-            </nav>
-        </div>
-    </header>
+    <title>BarniDW - Portfolio</title>
 
-    <!-- Sample content for scrolling -->
-    <main>
-        <section style="height: 1500px; padding: 20px;">
-            <h1>Welcome to Barni's Commissions!</h1>
-            <p>Scroll down to see the header stay in place.</p>
-        </section>
-    </main>
+    <!-- Import Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+</head>
+
+<body>
+
+    <div id="splash-screen">
+        <div class="splash-logo">
+            <img src="assets/images/websiteIcon.png" alt="Icon" class="logo-icon">
+            <a>BarniDW</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="nav">
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="assets/images/websiteIcon.png" alt="Icon" class="logo-icon"> <a>BarniDW </a>
+            </div>
+            
+            <div class="nav-links">
+                <div class="nav-item-active"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="assets.html">Assets</a></div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+            </div>
+    
+            <div class="header-buttons">
+                <a href="https://discord.gg/zhx2K4EZjH" target="_blank" class="login-button">Join My Discord Server</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const splashScreen = document.getElementById('splash-screen');
+            splashScreen.classList.add('fade-out'); // Trigger fade-out animation
+            setTimeout(() => {
+                splashScreen.style.display = 'none'; // Hide completely after fade-out
+            }, 1000); // Match this duration with the CSS transition time
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+
+    <div class="container">
+
+        <div class="container-left">
+            <h2>New level.</h2>
+            <h3>Unlock your game's potential</h3>
+        </div>
+
+        <div class="container-barni">
+            <h1>BarniDW</h1>
+            <img src="assets/images/front.png" alt="front-image">
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="container-title">
+        <h1>About Me</h1>
+    </div>
+    <div class="about-me">
+        <div class="about-me-content">
+            <img src="assets/images/about.png" alt="Profile Picture" class="profile-img">
+            <div class="about-me-text">
+                <h2 class="about-me-title">Hi, I'm BarniDW</h2>
+                <h3 class="about-me-subtitle">A Passionate Roblox Developer</h3>
+                <p>I've been developing smaller and bigger roblox projects for over 3 years now. I've had a lot of experience in the Roblox Development scene. I can do multiple things, such as: Modeling, VFX, Animating, but I am most skilled in Scripting, and Gui Designing.</p>
+                <p>My goal is to provide you high-quality assets, to make your game stand out.</p>
+                <p>Unlock your game's potential with my skills.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-title">
+        <h1>Achievements</h1>
+    </div>
+    <div class="achievements">
+        <div class="achievement-cards">
+            <div class="achievement-card">
+                <img src="assets/images/user.png" alt="Achievement Icon" class="achievement-icon">
+                <h3>2M+</h3>
+                <p class="achievement-subtext">Visits Earned</p>
+                <p class="achievement-description">Games I collectively contributed to has earned over 2M visits!</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container-title">
+        <h1>Skills</h1>
+    </div>
+    <div class="skills">
+        <div class="skills-cards">
+            <div class="skill-card">
+                <h3>Scripting</h3>
+                <p>I have 2+ years of experience scripting smaller and bigger projects, complex systems.</p>
+            </div>
+            <div class="skill-card">
+                <h3>GUI Design</h3>
+                <p>I have 1+ year of experience designing graphical user interfaces. I exceed at making modern themed designs, but I am great at making cartoonish/stylish designs too.</p>
+            </div>
+            <div class="skill-card">
+                <h3>VFX</h3>
+                <p>I have 1+ year of experience making VFX. I mostly make auras, found in RNG games.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Animating</h3>
+                <p>I have 1+ year of experience animating in Roblox. I can only animated R6 characters.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-title">
+        <h1>Showcase</h1>
+    </div>
+    <div class="projects">
+        <div class="video-row">
+            <div class="video-item3">
+                <iframe src="https://www.youtube.com/embed/aVqJZULRBVE?si=pszxIW0jhiMypLqq" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Currency System</a> 
+                    <br>
+                    <a>A currency system with 2 different shops. Weapon shop, where you can buy weapons, which gets lost after you die. And bike shop, which stays in your inventory, you can buy it with $500 cash, however, you need to have at least 1 hour of playtime to buy it. You can buy the gamepass, which bypasses the min playtime. Data stores included. </a>
+                    <br>
+                    <div class="small-box"><a>Commission</a></div>
+                </div>
+            </div>
+            <div class="video-item3">
+                <iframe src="https://www.youtube.com/embed/c9c6Zkc_FTU?si=kiyp9l80kwTcBjVT" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Admin/Event Panel</a> 
+                    <br>
+                    <a>An event panel locked by group roles. 4 Different really popular and fun minigames, which the admin can spawn, start and end whenever they like to. The asset includes a notification system along with a spectating system. You can only spectate players, who are playing in the event.</a>
+                    <br>
+                    <div class="small-box"><a>Commission</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-row">
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/-rjnKU1cqLk?si=8_LEc5pKgkvFCgaa" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Dialogue System</a> 
+                    <br>
+                    <a>A custom Dialogue System. Very modular, you can change and add buttons, and logic very easily. </a>
+                    <br>
+                    <div class="small-box"><a>Commission</a></div>
+                </div>
+            </div>
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/A9-dqZijekU?si=D0qiG6zVu2qIifrd" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Custom Leaderboard System</a> 
+                    <br>
+                    <a>A custom leaderboard system. Displays playernames, and icons next to their names that displays their roles. </a>
+                    <br>
+                    <div class="small-box"><a>Commission</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-row">
+            <div class="video-item2">
+                <iframe src="https://www.youtube.com/embed/6hG3-SICQ30?si=KM6q5ClscB0b9JJ6" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Melee System #1</a> 
+                    <br>
+                    <a>Client side hitboxes, with magnitude checks on the server.</a>
+                    <br>
+                    <div class="small-box"><a>Personal Project</a></div>
+                </div>
+            </div>
+            <div class="video-item2">
+                <iframe src="https://www.youtube.com/embed/C28W3vdA3aA?si=V0Kf5DEf9pCVZNnJ" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Melee System #2</a> 
+                    <br>
+                    <a>Main weapon logic is stored in a module for the best performance.</a>
+                    <br>
+                    <div class="small-box"><a>Personal Project</a></div>
+                </div>
+            </div>
+            <div class="video-item2">
+                <iframe src="https://www.youtube.com/embed/N_CEFLOJ198?si=0xdYkuWeipaosuAl" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>Melee System #3</a> 
+                    <br>
+                    <a>Easy to add, modify weapons, since most weapons use the same logic. </a>
+                    <br>
+                    <div class="small-box"><a>Personal Project</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-row">
+            <div class="video-item3">
+                <iframe src="https://www.youtube.com/embed/gothCuH85HQ?si=vgY1e_WqbFcen5aJ" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>FPS System</a> 
+                    <br>
+                    <a>Performance friendly weapon system with customized hotbar/inventory system, weapon spread, reload system, slide, fast movement system and a lot more! Inspired by the popular First Person Shooter game "Rivals" </a>
+                    <br>
+                    <div class="small-box"><a>Personal Project</a></div>
+                </div>
+            </div>
+            <div class="video-item3">
+                <iframe src="https://www.youtube.com/embed/x-c4t3oFaFE?si=S8TMO965SA_lVMl5" frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <h1>RNG Game</a> 
+                    <br>
+                    <a>Discontinued RNG game made by me. With custom roll/luck system. Aura Inventory and Item Inventory system, Bonus roll system, Biome system, Quests system, Trading system</a>
+                    <br>
+                    <div class="small-box"><a>Personal Project</a></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+    
+        <!-- New Section -->
+    <div class="new-section">
+        <h2 class="new-section-title">Ready to Commission me?</h2>
+        <p class="new-section-paragraph">This is the perfect opportunity to grow your game, and make millions. <br> You are at the right place. <br> Get in touch with me on Discord to commissions me!</p>
+        <a href="" class="new-section-button" target="_blank">Discord: @barnifasz</a>
+        <a href="https://discord.gg/zhx2K4EZjH" class="new-section-button" target="_blank">Join Discord Server</a>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-list">
+                <h3 class="footer-title">Quick Links</h3>
+                <a href="index.html" class="footer-button" aria-label="Home">Home</a>
+                <a href="assets.html" class="footer-button" aria-label="Assets">Assets</a>
+                <a href="contact.html" class="footer-button" aria-label="Contact">Contact</a>
+            </div>
+            <div class="footer-list">
+                <h3 class="footer-title">Contact</h3>
+                <a href="https://discord.gg/zhx2K4EZjH" target="_blank" class="footer-button discord-button" aria-label="Discord">Discord</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BarniDW. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
 </body>
+
 </html>
