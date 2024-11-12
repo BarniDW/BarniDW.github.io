@@ -1,0 +1,628 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-size: 16px;
+    overflow-x: hidden;
+    background-color: #0f0f0f;
+    color: #d0c8ff;
+    z-index: 2;
+    text-align: center; /* Center align text by default */
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 31px;
+    height: 31px;
+    margin-right: 3px; 
+}
+
+/* Splash Screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000; /* Ensure it stays on top */
+    transition: opacity 1s ease; /* Fade-out transition */
+    opacity: 1; /* Initial opacity */
+}
+
+#splash-screen.fade-out {
+    opacity: 0; /* Target opacity for fade-out effect */
+}
+
+.splash-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.splash-logo .logo-icon {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Navbar Container */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 1);
+    border-bottom: 2px solid rgb(22, 22, 22);
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: background-color 0.3s, border-bottom-color 0.3s;
+}
+
+.nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(22, 22, 22, 0);
+}
+
+/* Navbar Flexbox Layout */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1650px;
+    padding: 0 20px;
+    height: 5rem;
+}
+
+/* Center the nav-links element */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1; /* Allow nav-links to expand in the center */
+}
+
+/* Adjust header-buttons position */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Items */
+.nav-item-active a,
+.nav-item a {
+    text-decoration: none;
+    color: rgb(184, 184, 184);
+    font-size: 19px;
+    transition: 0.3s;
+    padding: 8px 17px;
+    border-radius: 10px;
+}
+
+.nav-item-active a {
+    color: rgb(255, 255, 255);
+    background-color: rgba(34, 34, 34, 0.7);
+}
+
+.nav-item:hover a {
+    color: rgb(255, 255, 255);
+    background-color: rgba(34, 34, 34, 0.7);
+}
+
+.logo {
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+}
+
+.login-button {
+    background-color: rgba(100, 100, 255, 0.15);
+    color: #d0c8ff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: rgba(100, 100, 255, 0.3);
+}
+
+.roadmap-link {
+    color: #d0c8ff;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 100, 255, 0.15);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.roadmap-link:hover {
+    color: #fff;
+    background-color: rgba(100, 100, 255, 0.3);
+}
+
+/* Hero Section */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    background-color: rgb(3, 3, 3);
+    width: 100%;
+    height: 42rem;
+    border-bottom: solid rgb(19, 19, 19) 1px;
+    padding-top: 90px;
+}
+
+.container-left {
+    color: white;
+    display: flex; /* Keeps flex */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Aligns items to the top */
+    align-items: flex-start; /* Aligns to the left */
+    text-align: left;
+    padding-left: 6%;
+    width: 30%;
+}
+
+.container-left h2 {
+    font-size: 100px;
+    margin: 0;
+    margin-bottom: 0px;
+    color: rgb(255, 255, 255, 0.9);
+}
+
+.container-left h3 {
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 0px;
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.container-barni {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    width: 70%;
+}
+
+.container-barni h1 {
+    font-size: 10rem;
+    margin: 0;
+    user-select: none;
+    z-index: 1;
+}
+
+.container-barni img {
+    position: absolute;
+    z-index: 10;
+    max-width: 100%;
+    height: 42rem;
+    object-fit: cover; /* Ensure image covers the area properly */
+}
+
+/* Container Title Section */
+.container-title {
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.container-title h1 {
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+.about-me {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    color: #d0c8ff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.profile-img {
+    width: 350px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgb(20, 20, 20);
+    background-color: rgb(5, 5, 5);
+    transition: 0.7s;
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px; /* Limit the width of the text */
+    text-align: left; /* Align text to the left */
+    padding: 24px 24px 24px 24px;
+    border-radius: 8px;
+    border: 1px solid rgb(20, 20, 20);
+    background-color: rgb(5, 5, 5);
+}
+
+.about-me-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left; /* Ensure title is left-aligned */
+}
+
+.about-me-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left; /* Ensure subtitle is left-aligned */
+}
+
+.about-me-text p {
+    font-size: 18px;
+    text-align: justify; /* Justify the paragraph text */
+}
+
+/* Achievements Section */
+.achievements {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.achievement-card {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    color: #d0c8ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.achievement-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0px;
+}
+
+.achievement-card h3 {
+    font-size: 33px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.achievement-description {
+    font-size: 22px;
+    color: #d0c8ff;
+}
+
+
+/* Skills Section */
+.skills {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px; /* Max width for the section */
+    width: 100%;
+}
+
+.skill-card {
+    border: 1px solid rgb(20, 20, 20);
+    background-color: rgb(5, 5, 5);
+    color: #d0c8ff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.skill-card p {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* New CSS for the video section */
+.projects {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.projects {
+    border: 1px solid rgb(8, 8, 8);
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Video item sizing */
+.video-item, .video-item2 {
+    width: 100%;
+    margin-bottom: 20px;  /* Space between video items */
+}
+
+.video-item {
+    width: 42%;
+    height: 100%;
+}
+
+.video-item2 {
+    width: 27.5%;
+    height: 100%;
+}
+
+.video-item3 {
+    width: 42%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    border: 1px solid rgb(20, 20, 20);
+}
+
+.image1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid rgb(20, 20, 20);
+}
+
+.video-card {
+    background-color: rgb(3, 3, 3); /* Background color for the section */
+    border: 1px solid rgb(10, 10, 10);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.video-card a {
+    font-size: 16px;
+    display: flex;
+    justify-items: left;
+    color: #7b7796;
+}
+
+.video-card h1 {
+    font-size: 22px;
+    justify-items: left;
+    text-align: left;
+    color: #a099c9;
+}
+
+/* Small rounded box */
+.small-box {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgb(5, 5, 5); /* Background color for the section */
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 8px;
+}
+
+/* New Section */
+.new-section {
+    padding: 200px 20px; /* Add top and bottom padding */
+    background-color: rgb(3, 3, 3); /* Background color for the section */
+    color: #d0c8ff; /* Text color */
+    text-align: center; /* Center align the content */
+}
+
+.new-section-title {
+    font-size: 25px; /* Smaller font size for the title */
+    margin: 0; /* No padding or margin for the title */
+    color: #d0c8ff; /* Title color */
+}
+
+.new-section-paragraph {
+    text-decoration-line: none;
+    font-size: 20px;
+    margin: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.new-section-button {
+    background-color: rgba(100, 100, 255, 0.15);
+    color: #d0c8ff;
+    border: none;
+    padding: 18px 30px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.new-section-button:hover {
+    background-color: rgba(100, 100, 255, 0.3); /* Hover effect for buttons */
+}
+
+/* Main Footer Styling */
+footer {
+    background-color: rgb(5, 5, 5);
+    color: white;
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-top: 1px solid #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Footer List Styling */
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Button Links */
+.footer-button {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-button:hover {
+    color: #3b3b3b; /* Add a highlight color */
+}
+
+/* Discord Button Specific Styling */
+.discord-button {
+    color: #7289da; /* Discord's branding color */
+}
+
+/* Footer Bottom - Copyright */
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+
+.discord-button {
+    background-color: #7289da;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.discord-button:hover {
+    background-color: #5b6eae;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+}
